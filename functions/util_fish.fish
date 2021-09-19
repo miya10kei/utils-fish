@@ -19,7 +19,11 @@ function compress -a format -a target -d "Compress the file or directory"
     case "tar"
       set command "tar -cvf $target.$format $target"
     case "zip"
-      set command "zip $target.$format $target"
+      if test -d $target
+        set command "zip -r $target.$format $target"
+      else
+        set command "zip $target.$format $target"
+      end
     case "*"
       echo \uf05c" I don't know how to compress it as $format ..."
   end
