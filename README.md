@@ -6,6 +6,6 @@ fish plugin includes some useful utilities
 
 ## With Fisher
 ```
-fisher install miya10kei/util-fish
+fisher install miya10kei/utils-fish
 ```
 
